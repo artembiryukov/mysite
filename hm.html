@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: aquamarine;
+        text-align: center;
+        font-size: 100px;
+    }
+</style>
+
+<body>
+    <script>
+        let numUser;
+        let min = +prompt("min?", 0)
+        let max = +prompt("max?", 100)
+        let numX = +(Math.round(min + Math.random() * (max - min)))
+        do {
+            numUser = prompt("вгадайте число ", 0);
+            if (numUser === null) {
+                alert("Ми чекали від Вас число");
+            } else if (+numUser < numX) {
+                alert("Ваше число менше");
+            } else if (+numUser > numX) {
+                alert("Ваше число більше");
+            } else {
+                alert("ви вгадали!!!! " + numX);
+            }
+        } while (numUser != numX && numUser != null);
+        document.writeln("ви вгадали&#128515;&#128515;!!!! " + numX)
+
+    </script>
+</body>
+
+</html>
