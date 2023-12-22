@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="rects">Накладання прямокутників</canvas>
+    <canvas id="myCanvas" width="750" height="400"></canvas> 
+    <script>
+         let canvas = document.getElementById("myCanvas"), 
+                cxt = canvas.getContext("2d");
+            cxt.strokeStyle = "red";
+            cxt.setLineDash([15,5]);
+            cxt.strokeRect(40, 40, 100, 100);
+            cxt.strokeStyle = "blue";
+            cxt.setLineDash([2,5,6]);
+            cxt.strokeRect(180, 40, 100, 100);
+            cxt.strokeStyle = "green";
+            cxt.setLineDash([2,2]);
+            cxt.strokeRect(320, 40, 100, 100);
+           
+    </script>
+</body>
+</html>

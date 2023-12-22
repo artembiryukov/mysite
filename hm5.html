@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: blue;
+    }
+</style>
+<body>
+    <canvas id="rects">Накладання прямокутників</canvas>
+    <canvas id="myCanvas" width="500" height="200"></canvas>
+    <script>
+        let canvas = document.getElementById("myCanvas"), 
+                cxt = canvas.getContext("2d");
+            cxt.strokeStyle = "red";
+            cxt.fillStyle = "blue";
+            cxt.lineWidth = 15;
+            cxt.lineJoin = "miter";
+            cxt.strokeRect(40, 40, 100, 100);
+            cxt.lineJoin = "bevel";
+            cxt.strokeRect(180, 40, 100, 100);
+            cxt.lineJoin = "round";
+            cxt.strokeRect(320, 40, 100, 100);
+    </script>
+</body>
+</html>

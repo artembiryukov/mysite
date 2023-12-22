@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+    background-color: aqua;
+    color: black;
+    text-align: center;
+    font-size: 70px;
+    }
+</style>
+<body>
+    <script>
+        let sPaceYear = prompt('В якому був перший полетів у космос людини?', '');
+if (sPaceYear== null) {
+alert('До побачення')
+}
+if (sPaceYear< 1961) {
+ alert( 'Та ні, це щось дуже рано!' );
+document.writeln("це рано	&#128532;")
+} else if (sPaceYear > 1961) {
+ alert( 'О ні, в цей час вже багато хто політав!' ); 
+document.writeln("тоді вже багато хто літав	&#128517;")
+} else {
+ alert( 'Так, Ваша відповідь правильна!' );
+document.writeln("це правильно	&#128512;")
+} 
+    </script>
+</body>
+</html>

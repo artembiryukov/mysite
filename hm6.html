@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: black;
+        }
+    </style>
+    <canvas id="rects">Накладання прямокутників</canvas>
+    <canvas id="myCanvas" width="500" height="200"></canvas>
+      <script>
+        let canvas = document.getElementById("rects");
+    let cxt = canvas.getContext("2d");
+    canvas.height = 200;
+    canvas.width = 300;
+    cxt.fillStyle = "rgb(200, 0, 0)";
+    cxt.fillRect(15, 15, 100, 100); 
+    cxt.fillStyle = "rgb(0, 200, 0)";
+    cxt.fillRect(30, 30, 100, 100);
+    cxt.fillStyle = "rgb(0, 0, 200)";
+    cxt.fillRect(45, 45, 100, 100);
+      </script>
+</body>
+</html>

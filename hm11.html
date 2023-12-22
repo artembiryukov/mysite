@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Анімація руху зображення</title>
+  <style>
+    #movingImage {
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+
+  <img id="movingImage" src="https://wpapers.ru/wallpapers/films/Cartoons/4303/TS_%D0%A8%D1%80%D0%B5%D0%BA.jpg" alt="ШРЕК">
+  
+  <script>
+    var image = document.getElementById('movingImage');
+    var positionX = 0;
+    var speed = 5; 
+    function moveImage() {
+      
+      positionX += speed;
+
+     
+      image.style.left = positionX + 'px';
+
+      
+      if (positionX > window.innerWidth) {
+        positionX = -image.width; 
+      }
+    }
+
+    
+    var animationInterval = setInterval(moveImage, 30); 
+
+    
+    setTimeout(function() {
+      clearInterval(animationInterval);
+    }, 5000);
+  </script>
+</body>
+</html>

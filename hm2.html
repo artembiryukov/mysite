@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="rects">Накладання прямокутників</canvas>
+    <canvas id="myCanvas" width="750" height="400"></canvas>
+    <script>
+        let userGuess = prompt("Скільки кіл намалювати?");
+
+function Random(min, max) {
+    return Math.random() * (max - min) + min;
+}
+
+function drawCircle(cxt, canvasWidth, canvasHeight, circles) {
+    circles.forEach(circle => {
+        const x = circle.x + circle.vx;
+        const y = circle.y + circle.vy;
+        const radius = circle.radius;
+
+        if (x - radius < 0 || x + radius > canvasWidth) {
+            circle.vx = -circle.vx;
+        }
+        if (y - radius < 0 || y + radius > canvasHeight) {
+            circle.vy = -circle.vy;
+        }
+
+        circle.x = x;
+        circle.y = y;
+
+        const colorCxt = `rgb(${Math.floor(Random(0, 256))}, ${Math.floor(Random(0, 256))}, ${Math.floor(Random(0, 256))})`;
+        cxt.fillStyle = colorCxt;
+        cxt.beginPath();
+        cxt.arc(x, y, radius, 0, 2 * Math.PI);
+        cxt.closePath();
+        cxt.fill();
+    });
+}
+let canvas = document.getElementById('myCanvas');
+let cxt = canvas.getContext('2d');
+
+let circles = [];
+for (let i = 0; i < userGuess; i++) {
+    circles.push({
+        x: Random(0, canvas.width),
+        y: Random(0, canvas.height),
+        radius: Random(10, 50),
+        vx: Random(-4, 4),
+        vy: Random(-4, 4)
+    });
+}
+setInterval(() => {
+    cxt.clearRect(0, 0, canvas.width, canvas.height);
+    drawCircle(cxt, canvas.width, canvas.height, circles);
+}, 1);
+    </script>
+</body>
+</html>
