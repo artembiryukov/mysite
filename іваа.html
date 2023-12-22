@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+body{
+        background-color: aquamarine;
+        color: black;
+        text-align: center;
+        font-size: 70px;
+    }
+</style>
 <body>
     <script>
         let ocenka = +prompt('Яка у вас оцінка?')
@@ -12,26 +20,29 @@ switch (ocenka){
     case 1:
     case 2:
     case 3:
-        
-        alert('дуже незадовільна оцінка');
+        document.writeln(" в тебе початковий рівень")
+        alert('в тебе початковий рівень');
         break;
         case 4:
         case 5:
         case 6:
-        alert(' незадовільна оцінка');
+           document.writeln(" в тебе середній рівень")
+        alert('в тебе середній рівень');
         break;
         case 7:
         case 8:
         case 9:
-        alert(' задовільна оцінка');
+document.writeln(" в тебе достатній рівень")
+        alert('в тебе достатній рівень ');
         break;
         case 10:
         case 11:
         case 12:
-        alert(' дуже задовільна оцінка');
+document.writeln(" в тебе високий рівень рівень")
+        alert(' в тебе високий рівень');
         break;
         default:
-            alert('такої оцінки немає')
+            alert('такої оцінки не має')
         
 }
     </script>
