@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: blueviolet;
+            text-align: center;
+            font-size: 45px;
+            color: burlywood;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let numbers = ["Нуль", "Один", "Два"];
+/*alert(numbers [0] ); // Нуль
+alert(numbers [1] ); // Один
+alert(numbers [2] ); // Два
+numbers [2] = "не два"; // тепер ["Нуль", "Один", "не два"]
+alert(numbers);
+numbers [3] = "Три"; // тепер ["Нуль", "Один", "не два", "Три"] 
+alert(numbers);
+let array = [];
+array[87] = true;
+alert(array.length);
+let numbers = ['Нуль','Один','Два'];
+numbers.pop(); // видалили два
+alert(numbers);
+numbers.push('Нове два'); // Додали нове два
+alert(numbers);
+numbers.shift(); // видалили нуль
+alert(numbers);
+numbers.unshift('Новий нуль'); // додали новий нуль
+alert(numbers);
+let colors = ["yellow","blue"];
+alert(colors);
+colors.push("red");
+alert(colors)*/
+let number=prompt("how many complimets do you want?",10)
+let compliment=["cute","brave","kind","perfect","friendly","smart","clever","polite","lucky","beautiful"]
+let animals=["dog🐕", "cat🐱", "lion🦁", "tiger🐯", "monkey🐵", "mouse🐭", "horse🐴", "chicken🐔", "panda🐼", "wolf🐺"]
+for(let i=1; i<=number;i++){
+let rand=Math.floor(Math.random()*compliment.length);
+document.writeln(`you so ${compliment[rand]} as a ${animals[rand]}  <br>`);
+}
+    </script>
+</body>
+</html>
